@@ -16,43 +16,60 @@
                 <h1>ODIN</h1>
             </div>
         </div>
-    
-    
-        <form action="">
-            <h2>Let's do this!</h2>
-    
-            <div class="form-table">
-                <div class="form-row">
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name">
-                </div>
         
-                <div class="form-row">
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name">
-                </div>
-        
-                <div class="form-row">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                </div>
-        
-                <div class="form-row"> 
-                    <label for="">PHONE NUMBER</label>
-                    <input type="tel" id="telephone" name="telephone">
-                </div>
-        
-                <div class="form-row">
-                    <label for="pwd">PASSWORD</label>
-                    <input type="password" name="pwd" id="pwd">
-                </div>
-                
-                <div class="form-row">
-                    <label for="pwdConfirmation">CONFIRMATION PASSWORD</label>
-                    <input type="password" name="pwdConfirmation" id="pwdConfirmation">
-                </div>
+        <div class="right-side">
+            <div class="para">
+                <p>
+                    This is not a real online service! You know you need something
+                    like this in your life to help you realize your deeprest dreams.
+                    <br>
+                    Sign Up <span>now</span> to get started.
+                </p>
+            
+                <p>
+                    You <span>know</span> you want to.
+                </p>
             </div>
-        </form>
+    
+    
+            <form action="" method="post" id="myForm">
+                <h2>Let's do this!</h2>
+                <div class="form-table">
+                    <div class="form-row">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="ex: John" required>
+                    </div>
+            
+                    <div class="form-row">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="ex: Travolta" required>
+                    </div>
+            
+                    <div class="form-row">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="ex: name@email.com" required>
+                    </div>
+            
+                    <div class="form-row"> 
+                        <label for="">PHONE NUMBER</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="ex: 9999-9999">
+                    </div>
+            
+                    <div class="form-row">
+                        <label for="pwd">PASSWORD</label>
+                        <input type="password" name="pwd" id="pwd" placeholder="ex: 1234@" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="pwdConfirmation">CONFIRMATION PASSWORD</label>
+                        <input type="password" name="pwdConfirmation" id="pwdConfirmation" required>
+                    </div>
+                </div>
+            </form>
+
+            <button form="myForm">Create Account</button>
+            <p>Already have an acount? <a href="">Log in</a></p>
+        </div>
     </main>
 </body>
 </html>
