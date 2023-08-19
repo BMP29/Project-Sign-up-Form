@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
@@ -38,31 +40,40 @@
                     <div class="form-row">
                         <label for="first_name">FIRST NAME</label>
                         <input type="text" id="first_name" name="first_name" placeholder="ex: John" required>
+                        <span></span>
                     </div>
             
                     <div class="form-row">
                         <label for="last_name">LAST NAME</label>
                         <input type="text" id="last_name" name="last_name" placeholder="ex: Travolta" required>
+                        <span></span>
                     </div>
             
                     <div class="form-row">
                         <label for="email">EMAIL</label>
                         <input type="email" id="email" name="email" placeholder="ex: name@email.com" required>
+                        <span></span>
                     </div>
             
                     <div class="form-row"> 
-                        <label for="">PHONE NUMBER</label>
-                        <input type="tel" id="telephone" name="telephone" placeholder="ex: 9999-9999">
+                        <label for="telephone">PHONE NUMBER</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="ex: 9999-9999" required>
+                        <span></span>
                     </div>
             
                     <div class="form-row">
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" name="pwd" id="pwd" placeholder="ex: 1234@" required>
+
+                        <input type="password" name="pwd" id="pwd" placeholder="ex: pwd1234@" minlength="8" 
+                        pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required>
+
+                        <span></span>
                     </div>
                     
                     <div class="form-row">
                         <label for="pwdConfirmation">CONFIRMATION PASSWORD</label>
-                        <input type="password" name="pwdConfirmation" id="pwdConfirmation" required>
+                        <input type="password" name="pwdConfirmation" id="pwdConfirmation" minlength="8" required>
+                        <span id="pwdConfSpan"></span>
                     </div>
                 </div>
             </form>

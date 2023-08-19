@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@font-face {
+    font-family: Norse;
+    src: url('./fonts/Norse-Bold.otf');
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -348,14 +355,6 @@
     display: none;
   }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-@font-face {
-    font-family: Norse;
-    src: url('./fonts/Norse-Bold.otf');
-}
-
 * {
     box-sizing: border-box;
 }
@@ -377,7 +376,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: max(510px, 30vw);
+    width: max(400px, 30vw);
 
     position: absolute;
     top: max(100px, 16vh);
@@ -385,19 +384,19 @@ main {
 
     font-family: "Norse";
     color: white;
-    font-size: 3.4rem;
+    font-size: 3rem;
     padding: 10px 0;
 }
 
 .background {
     background-image: url(./imgs/halie-west-25xggax4bSA-unsplash.jpg);
     height: max(100vh, 650px);
-    width: max(510px, 30vw);
+    width: max(400px, 30vw);
     background-size: cover;
 }
 
 .logo img {
-    height: 150px;
+    height: 120px;
 }
 
 h1, p {
@@ -431,24 +430,31 @@ form {
     flex-flow: column wrap;
     margin-bottom: 20px;
     margin-right: 70px;
-    width: 280px;
+    width: 200px;
 }
 
 input {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
     border: 1px solid #cecece;
     border-radius: 5px;
     margin-top: 4px;
 }
 
+label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 .para {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     margin-left: 50px;
     font-weight: 500;
 }
 
-p:nth-child(2) {
+.right-side p:nth-child(2) {
     margin-top: 30px;
 }
 
@@ -465,7 +471,8 @@ button {
     font-size: 1.3rem;
     padding: 10px 30px;
     box-shadow: 4px 5px 16px 0px #00000047;
-    margin: 30px 30px;
+    margin: 30px 50px;
+    margin-top: 50px;
 }
 
 a {
@@ -475,9 +482,39 @@ a {
 }
 
 .right-side > p {
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 input:invalid {
     border: 1px solid rgb(255, 72, 72);
+}
+
+input:valid {
+    border: 1px solid rgb(90, 173, 79);
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid black;
+}
+
+input:invalid + span{
+    position: relative;
+}
+
+input:invalid + span::before {
+    position: absolute;
+    content: "Invalid";
+    color: rgba(255, 0, 0, 0.637);
+    font-size: 0.8rem;
+    bottom: 4px;
+    left: 160px;
+}
+
+input:invalid:focus + span::before {
+  content: "";
+}
+
+input:focus {
+  border: 1px solid rgb(49, 87, 255);
 }
